@@ -3,6 +3,14 @@
   <artifactId>springboot-mysite</artifactId>
   <packaging>war</packaging>
   
+   <properties>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+      <org.springframework-version>4.3.1.RELEASE</org.springframework-version>
+      <jcloverslf4j.version>1.7.6</jcloverslf4j.version>
+      <logback.version>1.1.1</logback.version>
+   </properties>
+  
   <parent>
     <groupId>com.cafe24</groupId>
     <artifactId>springboot</artifactId>
@@ -51,6 +59,17 @@
       <groupId>org.apache.tomcat.embed</groupId>
       <artifactId>tomcat-embed-jasper</artifactId>
    </dependency>
+   
+   <!-- Logback -->
+     <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>jcl-over-slf4j</artifactId>
+     </dependency>
+     
+     <dependency>
+        <groupId>ch.qos.logback</groupId>
+        <artifactId>logback-classic</artifactId>
+     </dependency>
   </dependencies>
   
   <build>
@@ -70,6 +89,7 @@
                <path>/mysite5</path>
                <username>admin</username>
                <password>manager</password>
+              
             </configuration>
          </plugin>
   		
